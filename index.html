@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <title>Interactive VA Checklist</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  Hello world
+  <div id="app">
+    <h1>VA Dependency Verification Checklist</h1>
+    <div id="step-content"></div>
+    <div class="navigation">
+      <button onclick="goToPreviousStep()">Previous</button>
+      <button onclick="goToNextStep()">Next</button>
+      <button onclick="goToHome()">Home</button>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
-
 </html>
