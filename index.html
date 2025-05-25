@@ -4,13 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="styles.css" />
-  <title>Interactive VA Checklist</title>
+  <title>Interactive VA Compliance Checklist</title>
 </head>
 <body>
   <div class="container">
-    <h2>Dependency Verification Checklist</h2>
-    <div id="cards-container"></div>
+    <h2>System Compliance Checklist</h2>
 
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <p><strong>📅 Date of claim</strong></p>
+          <button onclick="flipCard(this)">View Details</button>
+        </div>
+        <div class="card-back">
+          <p>Ensure the Date of Claim is accurate in the system and matches the received documentation.</p>
+          <label><input type="checkbox" onchange="unlockNext(this)"> Mark as complete</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="card hidden">
+      <div class="card-inner">
+        <div class="card-front">
+          <p><strong>📄 End product (EP)</strong></p>
+          <button onclick="flipCard(this)">View Details</button>
+        </div>
+        <div class="card-back">
+          <p>Verify the correct end product code is established for the claim type.</p>
+          <label><input type="checkbox" onchange="unlockNext(this)"> Mark as complete</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="card hidden">
+      <div class="card-inner">
+        <div class="card-front">
+          <p><strong>🏠 Address</strong></p>
+          <button onclick="flipCard(this)">View Details</button>
+        </div>
+        <div class="card-back">
+          <p>Ensure the veteran’s address is up to date, including any temporary or alternate addresses.</p>
+          <label><input type="checkbox" onchange="unlockNext(this)"> Mark as complete</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="card hidden">
+      <div class="card-inner">
+        <div class="card-front">
+          <p><strong>🎖️ Active duty periods</strong></p>
+          <button onclick="flipCard(this)">View Details</button>
+        </div>
+        <div class="card-back">
+          <p>Confirm all active duty periods are correctly entered in VBMS, including EOD, RAD, branch, character of service, separation reason, and verification status.</p>
+          <label><input type="checkbox" onchange="unlockNext(this)"> Mark as complete</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="card hidden">
+      <div class="card-inner">
+        <div class="card-front">
+          <p><strong>📝 Power of Attorney (POA)</strong></p>
+          <button onclick="flipCard(this)">View Details</button>
+        </div>
+        <div class="card-back">
+          <p>Validate that POA information is accurate and accessible across all systems.</p>
+          <label><input type="checkbox" onchange="unlockNext(this)"> Mark as complete</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final review question -->
     <div id="final-question" class="hidden">
       <p><strong>Is the checklist complete?</strong></p>
       <label><input type="radio" name="complete" value="yes"> Yes</label>
