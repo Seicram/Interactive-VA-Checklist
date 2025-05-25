@@ -19,3 +19,13 @@ function submitChecklist() {
 
   alert(resultMessage);
 }
+
+document.querySelectorAll('.error-list input[type="checkbox"]').forEach(item => {
+  item.addEventListener('change', updateProgress);
+});
+
+function updateProgress() {
+  const total = document.querySelectorAll('.error-list input[type="checkbox"]').length;
+  const checked = document.querySelectorAll('.error-list input[type="checkbox"]:checked').length;
+  document.getElementById("progressBar").value = checked;
+}
